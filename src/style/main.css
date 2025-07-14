@@ -28,7 +28,7 @@ h2 {
 }
 h2.fade-out {
   opacity: 0;
-  transition: opacity 5s ease;
+  transition: opacity 15s ease;
 }
 
 .reset {
