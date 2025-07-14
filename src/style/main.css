@@ -70,7 +70,9 @@ h2.fade-out {
 
     /* transform: rotateY(180deg); */
     /*starts flipped */
+    transition: transform 0.20s, box-shadow 0.6s ease-out;
     transition: 0.25s;
+   
 }
 .card:hover {
   transform: scale(1.1);
@@ -110,3 +112,35 @@ h2.fade-out {
   transform: rotateY(180deg);
 }
 
+.card.gold-glow {
+  box-shadow: 0px 0px 65px 25px rgba(248, 255, 46, 0.9);
+  z-index: 2;
+}
+.game.expand {
+  position: fixed;
+  inset:0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  /* background: radial-gradient(#ffffff 60%, #e0e0e0); */
+  transition: all 1s ease;
+  z-index: 1;
+}
+/* .reset.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+} */
+.reset.hide {
+ 
+  z-index: 999999999;
+  background-color: #F5F5F6;
+  color: #000;
+  border: none;
+  
+  transition: all 0.6s ease-in-out;
+}
+.reset.hide:hover {
+   background-color: #000;
+  color: #fff;
+}

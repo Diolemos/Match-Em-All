@@ -68,13 +68,19 @@ function handleClick() {
     openCards.push(this);
   }
   if (openCards.length === 2) {
-    setTimeout(checkMatch, 600);
+    setTimeout(checkMatch, 300);
   }
 }
 
 function checkMatch() {
   const [first, second] = openCards;
   if (first.dataset.name === second.dataset.name) {
+     first.classList.add( "gold-glow", "boxMatch");
+  second.classList.add("gold-glow", "boxMatch");
+   setTimeout(() => {
+    first.classList.remove("gold-glow");
+    second.classList.remove("gold-glow");
+  }, 1100);
     first.classList.add("boxMatch");
     second.classList.add("boxMatch");
   } else {
@@ -85,7 +91,14 @@ function checkMatch() {
 
   const matched = document.querySelectorAll(".boxMatch");
   if (matched.length === cards.length) {
-    alert("You matched 'em all!");
-  }
-}
+    const gameArea = document.querySelector(".game");
+  const resetBtn = document.querySelector(".reset");
+
+  gameArea.classList.add("expand");
+
+  resetBtn.classList.add("hide");
+
+  
+
+} }
 
