@@ -1,0 +1,26 @@
+# Node modules (in case you add npm later)
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# Compiled files or build artifacts (just in case)
+dist/
+build/
+*.zip
+
+# Cache
+.cache/
+*.tmp
+*.swp
+
+# Environment/config files
+.env
+.env.local
