@@ -35,7 +35,7 @@ const cardsData = [
 
 const selectedCards = cardsData
   .sort(() => Math.random() - 0.5)
-  .slice(0, 8);
+  .slice(0, 9);
 
 const cards = [...selectedCards, ...selectedCards].sort(() => Math.random() - 0.5);
 let openCards = [];
