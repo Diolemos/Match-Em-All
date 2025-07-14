@@ -68,7 +68,7 @@ function handleClick() {
     openCards.push(this);
   }
   if (openCards.length === 2) {
-    setTimeout(checkMatch, 300);
+    setTimeout(checkMatch, 800);
   }
 }
 
@@ -90,15 +90,17 @@ function checkMatch() {
   openCards = [];
 
   const matched = document.querySelectorAll(".boxMatch");
-  if (matched.length === cards.length) {
-    const gameArea = document.querySelector(".game");
+ if (matched.length === cards.length) {
+  const gameArea = document.querySelector(".game");
   const resetBtn = document.querySelector(".reset");
+  const header = document.querySelector("h2");
+  if (header) header.remove();
 
-  gameArea.classList.add("expand");
+  // Add a scale-up class to all cards
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.add("scale-up");
+  });
 
   resetBtn.classList.add("hide");
-
-  
-
 } }
 
