@@ -33,7 +33,11 @@ const cardsData = [
   { name: "wugtrio", img: "src/images/wugtrio.png" }
 ];
 
-const cards = [...cardsData, ...cardsData].sort(() => Math.random() - 0.5);
+const selectedCards = cardsData
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 8);
+
+const cards = [...selectedCards, ...selectedCards].sort(() => Math.random() - 0.5);
 let openCards = [];
 
 cards.forEach(({ name, img }) => {
