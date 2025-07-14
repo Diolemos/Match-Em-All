@@ -21,9 +21,10 @@ body {
 
 h2 {
     font-size: 3rem;
-    color: #0e0e0e;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    color: #030303;
+    font-weight: 900;
+    text-transform: capitalize;
+    
 }
 
 .reset {
