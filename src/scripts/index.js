@@ -32,7 +32,7 @@ const cardsData = [
   { name: "squirtle", img: "src/images/squirtle.png" },
   { name: "wugtrio", img: "src/images/wugtrio.png" }
 ];
-
+let hasClickedOnce = false;
 const selectedCards = cardsData
   .sort(() => Math.random() - 0.5)
   .slice(0, 9);
@@ -59,6 +59,10 @@ cards.forEach(({ name, img }) => {
 });
 
 function handleClick() {
+    if (!hasClickedOnce) {
+    hasClickedOnce = true;
+    document.querySelector("h2").classList.add("fade-out");
+  } //make the header go away...
   if (openCards.length < 2 && !this.classList.contains("flipped")) {
     this.classList.add("flipped");
     openCards.push(this);
@@ -84,3 +88,4 @@ function checkMatch() {
     alert("You matched 'em all!");
   }
 }
+

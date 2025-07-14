@@ -26,6 +26,10 @@ h2 {
     text-transform: capitalize;
     
 }
+h2.fade-out {
+  opacity: 0;
+  transition: opacity 5s ease;
+}
 
 .reset {
     padding: 15px 20px;
