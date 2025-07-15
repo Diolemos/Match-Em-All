@@ -45,7 +45,7 @@ h2.fade-out {
     font-weight: 600;
 }
 
-.reset:focus {
+.reset:active {
     background-color: #ffffff;
     color: #252525;
 }
