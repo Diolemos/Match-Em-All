@@ -1,3 +1,17 @@
+const resetBtn = document.querySelector(".reset");
+
+resetBtn.addEventListener("click", () => {
+  const matched = document.querySelectorAll(".boxMatch");
+
+  if (matched.length === cards.length) {
+   //if game is complete , reload right away 
+    window.location.reload();
+  } else {
+    if (confirm("Reset game?")) {
+      window.location.reload();
+    }
+  }
+});
 const cardsData = [
   { name: "alolan-dugtrio", img: "src/images/alolan-dugtrio.png" },
   { name: "applin", img: "src/images/applin.png" },
@@ -37,7 +51,7 @@ const selectedCards = cardsData
   .sort(() => Math.random() - 0.5)
   .slice(0, 9);
 
-const cards = [...selectedCards, ...selectedCards].sort(() => Math.random() - 0.5);
+  const cards = [...selectedCards, ...selectedCards].sort(() => Math.random() - 0.5);
 let openCards = [];
 
 cards.forEach(({ name, img }) => {
